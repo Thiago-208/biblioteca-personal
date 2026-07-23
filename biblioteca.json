@@ -1,0 +1,66 @@
+[
+    {
+        "titulo": "1984",
+        "autor": "Orwell",
+        "año": 1947,
+        "paginas": 384,
+        "genero": "clasico",
+        "leido": true
+    },
+    {
+        "titulo": "rebelion en la granja",
+        "autor": "Orwell",
+        "año": 1945,
+        "paginas": 150,
+        "genero": "clasico",
+        "leido": true
+    },
+    {
+        "titulo": "cadaver exquisito",
+        "autor": "bazterrica",
+        "año": 2017,
+        "paginas": 273,
+        "genero": "ciencia ficcion",
+        "leido": true
+    },
+    {
+        "titulo": "moby dick",
+        "autor": "sherald",
+        "año": 1880,
+        "paginas": 600,
+        "genero": "clasico",
+        "leido": false
+    },
+    {
+        "titulo": "Moby Dick",
+        "autor": "Fazio",
+        "año": 1920,
+        "paginas": 578,
+        "genero": "clasico",
+        "leido": true
+    },
+    {
+        "titulo": "el libro de joel",
+        "autor": "joel",
+        "año": 1986,
+        "paginas": 40,
+        "genero": "bibliografia",
+        "leido": false
+    },
+    {
+        "titulo": "we",
+        "autor": "re",
+        "año": "1",
+        "paginas": "1",
+        "genero": "c",
+        "leido": "si"
+    },
+    {
+        "titulo": "w",
+        "autor": "e",
+        "año": 1,
+        "paginas": 2,
+        "genero": "d",
+        "leido": true
+    }
+]

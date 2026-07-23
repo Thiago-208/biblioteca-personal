@@ -1,0 +1,10 @@
+libro ={
+"nombre": "manu",
+"paginas": 123,
+"leido": False
+}
+
+hola mundo xd. Este teclado es re incómodo jaja lol
+|||°|¬¬°|1!1""2#$3$%54&&FGF }
+                ddñññÑÑñ;,:._--?''\\''==00[]222+
+                ---
