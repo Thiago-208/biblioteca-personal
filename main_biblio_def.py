@@ -21,6 +21,11 @@ def libro():
 }
    return libro
 
+def biblioteca():
+    with open("biblioteca.json", "r", encoding="utf-8") as archivo:
+        biblioteca = json.load(archivo)
+    return biblioteca
+
 def corroboracion (pregunta, dato):
     if pregunta.isdecimal():
        return int(pregunta)
@@ -65,29 +70,17 @@ def nuevo_libro():
    return libro_nuevo
 
 def mostrar_libros():
-    with open ("biblioteca.json", "r", encoding="utf-8") as archivo:
-        biblioteca = json.load(archivo)
-        print(biblioteca)
+    print(biblioteca())
     return mostrar_libros
 
-def buscar():
-    with open ("biblioteca.json", "r", encoding="utf-8") as archivo:
-        biblioteca = json.load(archivo)
-        titulo = input("Buscar título: ")
-        for libro in biblioteca:
-            if titulo.lower() == libro["titulo"]:
-                return print(libro)
-        for libro in biblioteca:
-            if titulo.lower() != libro["titulo"]:
-                return print("Libro no encontrado.")
+def buscar(titulo):
+    biblioteca()
+    for libro in biblioteca():
+        if titulo.lower() == libro["titulo"]:
+            return libro
+        return False
     
 def editar_libro():
-    with open ("biblioteca.json", "r", encoding="utf-8") as archivo:
-        biblioteca = json.load(archivo)
-        titulo = input("Buscar título: ")
-        for libro in biblioteca:
-            if titulo.lower() == libro["titulo"]:
-                return nuevo_libro()
-        for libro in biblioteca:
-            if titulo.lower() != libro["titulo"]:
-                return print("Libro no encontrado.")
+    libro = buscar(input("Título: "))
+    print(libro)
+    libro["autor"] = "Hola mundo!"

@@ -32,35 +32,11 @@
         "leido": false
     },
     {
-        "titulo": "Moby Dick",
-        "autor": "Fazio",
-        "año": 1920,
-        "paginas": 578,
-        "genero": "clasico",
-        "leido": true
-    },
-    {
-        "titulo": "el libro de joel",
-        "autor": "joel",
-        "año": 1986,
-        "paginas": 40,
-        "genero": "bibliografia",
+        "titulo": "Hola que tal",
+        "autor": "Thiago",
+        "año": 2008,
+        "paginas": 178,
+        "genero": "biografia",
         "leido": false
-    },
-    {
-        "titulo": "we",
-        "autor": "re",
-        "año": "1",
-        "paginas": "1",
-        "genero": "c",
-        "leido": "si"
-    },
-    {
-        "titulo": "w",
-        "autor": "e",
-        "año": 1,
-        "paginas": 2,
-        "genero": "d",
-        "leido": true
     }
 ]

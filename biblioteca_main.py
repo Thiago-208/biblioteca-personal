@@ -12,6 +12,6 @@ while True:
     if boton == 2:
         mostrar_libros()
     if boton == 3:
-        buscar()
+        buscar(input("Título: "))
     if boton == 4:
         editar_libro()
