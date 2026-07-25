@@ -20,7 +20,7 @@ def libro():
     "leido" : input("Fue leído? ")
 }
    return libro
-
+#carga
 def biblioteca():
     with open("biblioteca.json", "r", encoding="utf-8") as archivo:
         biblioteca = json.load(archivo)
@@ -50,23 +50,19 @@ def booleano(dato):
             else:
                 if dato.lower() == "no":
                     return False
-
-def guardar(libro):
-    with open ("biblioteca.json", "r", encoding="utf-8") as archivo:
-        biblioteca = json.load(archivo)
+#guarda
+def guardar(biblioteca):
     with open ("biblioteca.json", "w", encoding="utf-8") as archivo:
-        biblioteca.append(libro)
         json.dump(biblioteca, archivo, indent=4, ensure_ascii=False)
-    with open ("biblioteca.json", "r", encoding="utf-8") as archivo:
-        biblioteca = json.load(archivo)
-    return biblioteca
-
+#agrega
 def nuevo_libro():
+   biblioteca_ = biblioteca()
    libro_nuevo = libro()
    libro_nuevo["paginas"] = corroboracion((libro_nuevo["paginas"]), "Páginas")
    libro_nuevo["año"] = corroboracion((libro_nuevo["año"]), "Año")
    libro_nuevo["leido"] = booleano((libro_nuevo["leido"]))
-   guardar(libro_nuevo)
+   biblioteca_.append(libro_nuevo)
+   guardar(biblioteca_)
    return libro_nuevo
 
 def mostrar_libros():
@@ -74,13 +70,22 @@ def mostrar_libros():
     return mostrar_libros
 
 def buscar(titulo):
-    biblioteca()
     for libro in biblioteca():
-        if titulo.lower() == libro["titulo"]:
+        if titulo.lower() == libro["titulo"].lower():
             return libro
-        return False
+    return False
     
 def editar_libro():
     libro = buscar(input("Título: "))
-    print(libro)
-    libro["autor"] = "Hola mundo!"
+    biblioteca_ = biblioteca()
+    for libro1 in biblioteca_:
+        if libro1["titulo"] == libro["titulo"]:
+            biblioteca_.remove(libro1)
+    for clave in libro:
+        dato = input(f"{clave} nuevo: ")
+        libro[clave]= dato
+    libro["paginas"] = corroboracion(libro["paginas"], "Páginas")
+    libro["año"] = corroboracion(libro["año"], "año")
+    libro["leido"] = booleano(libro["leido"])
+    biblioteca_.append(libro)
+    guardar(biblioteca_)

@@ -3,7 +3,7 @@ from main_biblio_def import menu
 from main_biblio_def import mostrar_libros
 from main_biblio_def import buscar
 from main_biblio_def import editar_libro
-
+from main_biblio_def import biblioteca
 while True:
     menu()
     boton = int(input("Presiona un botón: "))
@@ -12,6 +12,6 @@ while True:
     if boton == 2:
         mostrar_libros()
     if boton == 3:
-        buscar(input("Título: "))
+        print(buscar(input("Título: ")))
     if boton == 4:
         editar_libro()

@@ -1,14 +1,6 @@
 [
     {
-        "titulo": "1984",
-        "autor": "Orwell",
-        "año": 1947,
-        "paginas": 384,
-        "genero": "clasico",
-        "leido": true
-    },
-    {
-        "titulo": "rebelion en la granja",
+        "titulo": "Rebelion en la granja",
         "autor": "Orwell",
         "año": 1945,
         "paginas": 150,
@@ -16,27 +8,43 @@
         "leido": true
     },
     {
-        "titulo": "cadaver exquisito",
-        "autor": "bazterrica",
-        "año": 2017,
-        "paginas": 273,
-        "genero": "ciencia ficcion",
+        "titulo": "Martin Fierro",
+        "autor": "Jose H",
+        "año": 1820,
+        "paginas": 200,
+        "genero": "arg",
         "leido": true
     },
     {
-        "titulo": "moby dick",
-        "autor": "sherald",
-        "año": 1880,
-        "paginas": 600,
-        "genero": "clasico",
+        "titulo": "Mil",
+        "autor": "Nueve",
+        "año": 2022,
+        "paginas": 390,
+        "genero": "Si",
+        "leido": true
+    },
+    {
+        "titulo": "mil",
+        "autor": "nueve",
+        "año": 2020,
+        "paginas": 234,
+        "genero": "si",
+        "leido": true
+    },
+    {
+        "titulo": "1984",
+        "autor": "Orwell G.",
+        "año": 1947,
+        "paginas": 384,
+        "genero": "Universal",
         "leido": false
     },
     {
-        "titulo": "Hola que tal",
-        "autor": "Thiago",
-        "año": 2008,
-        "paginas": 178,
-        "genero": "biografia",
+        "titulo": "cadaver",
+        "autor": "agustina",
+        "año": 2016,
+        "paginas": 271,
+        "genero": "arg",
         "leido": false
     }
 ]
