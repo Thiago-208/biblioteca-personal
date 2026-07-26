@@ -4,6 +4,8 @@ from main_biblio_def import mostrar_libros
 from main_biblio_def import buscar
 from main_biblio_def import editar_libro
 from main_biblio_def import borrar
+from boton6 import estadisticas
+
 while True:
     menu()
     boton = int(input("Presiona un botón: "))
@@ -17,3 +19,8 @@ while True:
         editar_libro()
     if boton == 5:
         borrar()
+    if boton ==6:
+        estadisticas()
+    if boton==7:
+        print("Gracias por venir. Nos vemos más tarde.")
+        break
