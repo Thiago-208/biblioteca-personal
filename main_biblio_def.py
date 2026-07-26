@@ -89,3 +89,11 @@ def editar_libro():
     libro["leido"] = booleano(libro["leido"])
     biblioteca_.append(libro)
     guardar(biblioteca_)
+
+def borrar():
+    libro = buscar(input("Título: "))
+    biblioteca_ = biblioteca()
+    for libro1 in biblioteca_:
+        if libro1["titulo"] == libro["titulo"]:
+            biblioteca_.remove(libro1)
+    guardar(biblioteca_)
