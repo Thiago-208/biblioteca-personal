@@ -1,18 +1,18 @@
 [
     {
+        "titulo": "Mil novecientos ochenta y cuatro",
+        "autor": "Orwell G.",
+        "año": 1947,
+        "paginas": 390,
+        "genero": "Universal",
+        "leido": true
+    },
+    {
         "titulo": "Rebelion en la granja",
         "autor": "Orwell",
         "año": 1945,
         "paginas": 150,
         "genero": "clasico",
-        "leido": true
-    },
-    {
-        "titulo": "el libro de la selva",
-        "autor": "wer",
-        "año": 1999,
-        "paginas": 234,
-        "genero": "si",
         "leido": true
     }
 ]

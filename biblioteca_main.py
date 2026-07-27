@@ -1,7 +1,7 @@
 from main_biblio_def import nuevo_libro
 from main_biblio_def import menu
 from main_biblio_def import mostrar_libros
-from main_biblio_def import buscar
+from main_biblio_def import mostrar_libro
 from main_biblio_def import editar_libro
 from main_biblio_def import borrar
 from boton6 import estadisticas
@@ -14,7 +14,7 @@ while True:
     if boton == 2:
         mostrar_libros()
     if boton == 3:
-        print(buscar(input("Título: ")))
+        mostrar_libro()
     if boton == 4:
         editar_libro()
     if boton == 5:

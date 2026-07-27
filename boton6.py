@@ -22,7 +22,7 @@ def suma_paginas():
 
 def promedio(suma_paginas):
     promedio = suma_paginas/ len(biblioteca())
-    return promedio
+    return f"{promedio:.2f}"
 
 def ordenar():
     biblioteca_ordenada= []
@@ -65,7 +65,7 @@ def porcentaje_leido():
     parte= leidos()
     total= len(bool())
     porcentaje= parte/total*100
-    return int(porcentaje)
+    return f"{porcentaje:.2f}"
 
 
 

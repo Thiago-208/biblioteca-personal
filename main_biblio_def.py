@@ -8,7 +8,7 @@ def menu():
     print("4.Modificar Libro")
     print("5.Eliminar Libro")
     print("6.Estadísticas")
-    print("7. Guardar y salir")
+    print("7.Guardar y salir")
 
 def libro():
    libro = {
@@ -66,34 +66,61 @@ def nuevo_libro():
    return libro_nuevo
 
 def mostrar_libros():
-    print(biblioteca())
-    return mostrar_libros
+    for libro in biblioteca():
+        if libro["leido"]:
+            estado = "Leído"
+        else:
+            estado = "No leído"
+        print(20*"=")
+        print(f"Título: {libro["titulo"]}")
+        print(f"Autor: {libro["autor"]}")
+        print(f"Año: {libro["año"]}")
+        print(f"Páginas: {libro["paginas"]}")
+        print(f"Género: {libro["genero"]}")
+        print(f"Estado: {estado}")
 
 def buscar(titulo):
     for libro in biblioteca():
         if titulo.lower() == libro["titulo"].lower():
             return libro
+    #return print("El libro no fue registrado!")
     return False
-    
-def editar_libro():
+
+def mostrar_libro():
     libro = buscar(input("Título: "))
-    biblioteca_ = biblioteca()
-    for libro1 in biblioteca_:
-        if libro1["titulo"] == libro["titulo"]:
-            biblioteca_.remove(libro1)
-    for clave in libro:
-        dato = input(f"{clave} nuevo: ")
-        libro[clave]= dato
-    libro["paginas"] = corroboracion(libro["paginas"], "Páginas")
-    libro["año"] = corroboracion(libro["año"], "año")
-    libro["leido"] = booleano(libro["leido"])
-    biblioteca_.append(libro)
-    guardar(biblioteca_)
+    if libro not in biblioteca():
+        return print("El libro no está registrado!")
+    for dato in libro:
+        if libro["leido"]== True:
+            libro["leido"]= "Sí"
+        if libro["leido"]== False:
+            libro["leido"]= "No"
+        print(f"{dato} : {libro[dato]}")
+        print(20*"-")
+    
+
 
 def borrar():
     libro = buscar(input("Título: "))
+    if libro not in biblioteca():
+            return print("El libro no está registrado!")
     biblioteca_ = biblioteca()
-    for libro1 in biblioteca_:
+    for libro1 in biblioteca():
         if libro1["titulo"] == libro["titulo"]:
             biblioteca_.remove(libro1)
     guardar(biblioteca_)
+    
+def editar_libro():
+    libro0 = buscar(input("Título: "))
+    if libro0 not in biblioteca():
+            return print("El libro no está registrado!")
+    biblioteca_ = biblioteca()
+    for libro in biblioteca_:
+        if libro["titulo"] == libro0["titulo"]:
+            for clave in libro:
+                dato = input(f"{clave} nuevo: ")
+                libro[clave]= dato
+            libro["paginas"] = corroboracion(libro["paginas"], "Páginas")
+            libro["año"] = corroboracion(libro["año"], "año")
+            libro["leido"] = booleano(libro["leido"])
+            guardar(biblioteca_)
